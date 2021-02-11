@@ -2,4 +2,5 @@
 
 ###### Bootcamp DIO
 
-![/src/](..\netflix\src\print.png)
+![https://github.com/rodrigokamenach/netflix/tree/master/src/print.png]()
+
