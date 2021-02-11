@@ -1,0 +1,239 @@
+:root {
+    --preto: #000000;
+    --branco: #ffffff;
+    --vermelho: #cc0000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--preto);
+    font-family:'Courier New', Courier, monospace;                  
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: all 0.5s;    
+}
+
+.scrolled {
+    background-color: var(--preto);
+}
+
+header .container {
+    display: flex;
+    flex-direction: row nowrap;
+    justify-content:space-between;
+    align-items: center;        
+}
+
+header .container .esquerda {
+    display: flex;
+    flex-direction: row;
+    justify-content:start;
+    align-items: center;
+    min-width: 10rem;
+    margin: 1rem;
+}
+
+header .container .direita {
+    display: flex;
+    flex-direction: row;
+    justify-content:end;
+    align-items: center;
+    min-width: 5rem;
+    margin: 1rem;
+}
+
+header .container .logo {
+    color: var(--vermelho);
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.5rem;
+}
+
+header .container nav a {
+    color: var(--branco);
+}
+
+header .container nav a i {
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+main {   
+    width: 100%; 
+    background-image:linear-gradient(to bottom, transparent, 90%, black), url("../src/fundo.jpg");            
+    background-size:cover;
+    background-position: center;
+    height: 40em;    
+}
+
+main .destaque{       
+    display: flex;
+    height: 36em;
+}
+
+main .destaque .container {
+    color: var(--branco);
+    font-family: sans-serif; 
+    display: flex;       
+    flex-direction:column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10rem 2rem;
+    width: 50%;
+}
+
+main .destaque .container img {
+    height: 10rem;
+    width: 70%;
+}
+
+main .destaque .container .botoes {    
+    padding: 1rem; 
+    width: 100%;       
+}
+
+main .destaque .container p {    
+    padding: 1rem;
+    font-size: 14px;
+    text-align: justify;
+    text-shadow: 1px 1px black;
+}
+
+main .carrossel {
+    padding: 1rem 2rem; 
+    width: 100%;
+    color: var(--branco);        
+}
+
+main .carrossel h2 {
+    font-size: 14px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--branco);
+    padding: 0.5rem;
+}
+
+.assitir, .mlista {
+    padding: 10px 30px;
+    background-color:rgba(0, 0, 0, 0.3);    
+    border: none;
+    color: var(--branco);
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 1rem;
+    cursor:pointer;
+    border-radius: 3px;
+    transition: .3s ease all;
+}
+
+.assitir:hover, .mlista:hover {
+    color: var(--preto);
+    background-color:whitesmoke;
+}
+
+main .carrossel .capa-filme {            
+    width: 100%;
+    max-width: 100%;    
+    display: block;    
+}
+.menu {
+    display: block;    
+}
+
+.sidebar {
+    position:fixed;
+    width: 250px;
+    left: -250px;
+    background-color: #272727;
+    height: 100%;
+    color: var(--branco);
+    transition: left 0.4s ease;
+    border-right:#1b1b1b 1px solid;
+    z-index: 9999;    
+}
+
+.sidebar.show {    
+    left: 0;
+}
+
+.sidebar .titulo {
+    font-size: 20px;
+    line-height: 50px;
+    display: flex;
+    flex-direction: row nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: #1b1b1b solid 1px;
+}
+
+.titulo a i {
+    color: var(--branco);
+}
+
+.sid
+ebar ul {
+    background-color:rgb(44, 44, 44);
+    height: 100%;
+    width: 100%;
+    list-style: none;            
+}
+
+.sidebar ul li {
+    line-height: 60px;
+    font-family: Arial, Helvetica, sans-serif;    
+    border-bottom:1px solid #1b1b1b;
+    display: block;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: var(--branco);
+    display: block;
+    width: 100%;
+    padding: 0 2rem ;
+}
+
+.sidebar ul li a:hover {
+    width: 100%;
+    display: block;    
+    background-color:#ffffff;
+    line-height: 60px;
+}
+
+@media (max-width: 1000px) {
+    main .destaque .container {        
+        width: 70%;
+    }
+}
+
+@media (max-width: 600px) {
+    main .destaque .container {        
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    main .destaque {        
+        top: 10rem;               
+    }
+
+    main .destaque .container .botoes {             
+        width: 100%;
+        display: flex;       
+        flex-direction: column;        
+    }
+
+    .assitir {
+        margin-bottom: 15px;
+    }
+}
